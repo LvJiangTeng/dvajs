@@ -36,7 +36,7 @@ if (module.hot) {
   });
 }
 
-require('E:/code/study/dva/dvajs/examples/user-dashboard/src/global.css');
+require('E:/code/study/dvajs/examples/user-dashboard/src/global.css');
 // Enable service worker
 if (process.env.NODE_ENV === 'production') {
   require('./registerServiceWorker');

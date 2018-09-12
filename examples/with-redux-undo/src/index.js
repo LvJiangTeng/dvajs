@@ -5,12 +5,18 @@ import undoable, { ActionCreators } from 'redux-undo';
 import counter from './models/counter';
 
 // 1. Initialize
+// const app = dva({
+//   onReducer: reducer => (state, action) => {
+//     const newState = undoable(reducer, {})(state, action);
+//     return { ...newState };
+//   },
+// });
 const app = dva({
-  onReducer: reducer => (state, action) => {
-    const newState = undoable(reducer, {})(state, action);
-    return { ...newState };
-  },
-});
+  onReducer:reducer=>(state,action)=>{
+    const newState = undoable(reducer,{})(state,action);
+    return {...newState}
+  }
+})
 
 // 2. Model
 app.model(counter);
